@@ -1,4 +1,3 @@
-
 Description
 -----------
 
@@ -73,6 +72,8 @@ need to do the following steps.
 object you use, but an Empty one is very suitable). You could hide it
 if you want. Call it whatever make sense for you, for example,
 *InsightController*.
+
+![Add empty Object](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/add_empty.png)
 
 2. In Logic Editor, select the Empty object and add a new *Always*
 sensor. Do not set it to repeat.
