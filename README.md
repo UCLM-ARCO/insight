@@ -58,7 +58,7 @@ For example, if you download this repo on ``/home/user/insight``, you
 should set the ``PYTHONPATH`` like this:
 
     ::shell
-	export PYTHONPATH="/home/user/insight"
+	$ export PYTHONPATH="/home/user/insight"
 
 and, in the same shell, run blender afterwards.
 
@@ -74,6 +74,7 @@ if you want. Call it whatever make sense for you, for example,
 *InsightController*.
 
 ![Add empty Object](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/add_empty.png)
+![Set name to empty Object](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/name_empty.png)
 
 2. In Logic Editor, select the Empty object and add a new *Always*
 sensor. Do not set it to repeat.
@@ -82,8 +83,12 @@ sensor. Do not set it to repeat.
 this controller. Set *Execution Method* to *Module*, and point to
 *insight.init*.
 
+![Add sensor and controller](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/add_controller.png)
+
 Done! Just remains one detail: set the Viewport Shading of your view
 to *textured*. This is very important.
+
+![Set view to Textured](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/object_mode.png)
 
 Now, if you launch the Game Engine, it will create the needed elements
 to make it work. It takes all the cameras in your scene, and makes
@@ -91,6 +96,8 @@ them available for streaming. By default, all cameras are
 disabled. You can enable one by selecting the *display* plane created
 by Insight, and setting the Game Property *enabled* to True (just
 check the checkbox).
+
+![Choose display for Camera](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/select_display.png)
 
 Using it
 --------
