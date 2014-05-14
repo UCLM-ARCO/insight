@@ -1,12 +1,10 @@
-Description
------------
+# Description
 
 Insight is a Python module that gives you the ability to stream the
 content of any camera in your scene. It is designed for Blender Game
 Engine.
 
-A note on Blender version
--------------------------
+# A note on Blender version
 
 This module is intended for use in a modified version of Blender
 2.70. Why? The following is some kind of technical explanation.
@@ -25,20 +23,19 @@ compiled for GNU/Linux of Blender 2.70.5.
 
 I'll update this README as soon as the patch is accepted.
 
-Installation
-------------
+# Installation
 
 This is a Python module. There should be many ways of installing
 it. Please, choose one of the following.
 
-# Using Python pip
+## Using Python pip
 
 As simple as ever:
 
 	::shell
 	$ sudo pip install insight
 
-# Install from source
+## Install from source
 
 Download this repository, open a shell and enter the repository
 directory. Then, just type the following:
@@ -48,7 +45,7 @@ directory. Then, just type the following:
 
 Remember to use Python3, because is what Blender uses.
 
-# Don't install, just use
+## Don't install, just use
 
 You could just download this repo and set the ``PYTHONPATH``
 environment variable correctly. Then, launch Blender in a way that
@@ -62,8 +59,7 @@ should set the ``PYTHONPATH`` like this:
 
 and, in the same shell, run blender afterwards.
 
-Setting up
-----------
+# Setting up
 
 It is very easy to add support for Insight in your scene. You just
 need to do the following steps.
@@ -99,8 +95,7 @@ check the checkbox).
 
 ![Choose display for Camera](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/select_display.png)
 
-Using it
---------
+# Using it
 
 Ok, I've done everything you said, but, where is the video? The answer
 is simple: expecting you! Let me explain. Insight serves all videos as
@@ -134,8 +129,7 @@ directory as a guide. Next, run the Blender Game Engine and open the
 file with your browser. If everything is fine, you should see what your
 camera does.
 
-Troubleshooting
----------------
+# Troubleshooting
 
 1. I get the message: ``ERROR:INVALID viewport/shade mode, set it to
 TEXTURED`` or ``WARNING:image is None``. This is because your 3D view
