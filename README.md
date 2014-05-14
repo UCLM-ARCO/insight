@@ -64,7 +64,7 @@ and, in the same shell, run blender afterwards.
 It is very easy to add support for Insight in your scene. You just
 need to do the following steps.
 
-1. Add a Empty object to your scene (actually, no matter what kind of
+* Add a Empty object to your scene (actually, no matter what kind of
 object you use, but an Empty one is very suitable). You could hide it
 if you want. Call it whatever make sense for you, for example,
 *InsightController*.
@@ -72,10 +72,10 @@ if you want. Call it whatever make sense for you, for example,
 ![Add empty Object](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/add_empty.png)
 ![Set name to empty Object](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/name_empty.png)
 
-2. In Logic Editor, select the Empty object and add a new *Always*
+* In Logic Editor, select the Empty object and add a new *Always*
 sensor. Do not set it to repeat.
 
-2. Add a new *Python* controller, and connect both, the sensor and
+* Add a new *Python* controller, and connect both, the sensor and
 this controller. Set *Execution Method* to *Module*, and point to
 *insight.init*.
 
