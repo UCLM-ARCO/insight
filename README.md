@@ -94,6 +94,7 @@ by Insight, and setting the Game Property *enabled* to True (just
 check the checkbox).
 
 ![Choose display for Camera](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/select_display.png)
+![Activate checkin 'enable'](https://bytebucket.org/arco_group/insight/raw/tip/doc/images/game_properties.png)
 
 # Using it
 
