@@ -32,16 +32,18 @@ it. Please, choose one of the following.
 
 As simple as ever:
 
-	::shell
-	$ sudo pip install insight
+```shell
+$ sudo pip install insight
+```
 
 ## Install from source
 
 Download this repository, open a shell and enter the repository
 directory. Then, just type the following:
 
-	::shell
-	$ sudo python3 setup.py install
+```shell
+$ sudo python3 setup.py install
+```
 
 Remember to use Python3, because is what Blender uses.
 
@@ -54,8 +56,9 @@ assures you that it will use this variable.
 For example, if you download this repo on ``/home/user/insight``, you
 should set the ``PYTHONPATH`` like this:
 
-    ::shell
-	$ export PYTHONPATH="/home/user/insight"
+```shell
+$ export PYTHONPATH="/home/user/insight"
+```
 
 and, in the same shell, run blender afterwards.
 
@@ -114,16 +117,17 @@ file and call it whatever you want, i.e ``cameras.html``. Put inside the
 following code (modify according to your needs, specially the name of
 the camera)
 
-	::html
-	<html>
-	  <head>
-	  </head>
+```html
+<html>
+  <head>
+  </head>
 
-	  <body style="background-color:#404040; text-align: center">
-        <img src="http://127.0.0.1:8080/Kitchen/>
-	  </body>
+  <body style="background-color:#404040; text-align: center">
+    <img src="http://127.0.0.1:8080/Kitchen/>
+  </body>
 
-    </html>
+</html>
+```
 
 You could use the file called ``15cameras.html`` in the examples
 directory as a guide. Next, run the Blender Game Engine and open the
