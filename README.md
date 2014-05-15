@@ -33,7 +33,7 @@ it. Please, choose one of the following.
 As simple as ever:
 
 ```shell
-$ sudo pip install insight
+$ sudo pip3 install insight
 ```
 
 ## Install from source
