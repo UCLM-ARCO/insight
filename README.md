@@ -123,7 +123,7 @@ the camera)
   </head>
 
   <body style="background-color:#404040; text-align: center">
-    <img src="http://127.0.0.1:8080/Kitchen/>
+    <img src="http://127.0.0.1:8080/Kitchen"/>
   </body>
 
 </html>
