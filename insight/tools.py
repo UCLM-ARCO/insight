@@ -264,6 +264,10 @@ class ImageRenderSetup(object):
         bpy.ops.object.game_property_new(type='BOOL', name="enabled")
         plane.game.properties['enabled'].value = False
 
+        # bpy.ops.object.game_property_new(type="STRING", name="stream_url")
+        # url = "http://{0}:{1}/".format(*self.streamer.server_address)
+        # plane.game.properties['stream_url'].value = url + name
+
     def hide_object(self, obj):
         obj.hide = True
         obj.hide_render = True
