@@ -205,13 +205,15 @@ class ImageRenderSetup(object):
         plane_name = addprefix("display." + name)
         plane = bpy.data.objects.get(plane_name)
         if plane is not None:
+            self.set_variable_display_properties(plane, name)
             return False
 
         plane = self.new_display_plane(plane_name)
         self.add_display_texture(plane, name)
         self.add_imagerender_setup_controller(plane)
         self.add_imagerender_refresh_controller(plane)
-        self.add_display_properties(plane, name)
+        self.add_fixed_display_properties(plane, name)
+        self.set_variable_display_properties(plane, name)
         self.hide_object(plane)
         return True
 
@@ -257,16 +259,19 @@ class ImageRenderSetup(object):
         sensor.use_pulse_true_level = True
         sensor.link(controller)
 
-    def add_display_properties(self, plane, name):
+    def add_fixed_display_properties(self, plane, name):
         bpy.ops.object.game_property_new(type='STRING', name="camera")
         plane.game.properties['camera'].value = name
 
         bpy.ops.object.game_property_new(type='BOOL', name="enabled")
         plane.game.properties['enabled'].value = False
 
-        # bpy.ops.object.game_property_new(type="STRING", name="stream_url")
-        # url = "http://{0}:{1}/".format(*self.streamer.server_address)
-        # plane.game.properties['stream_url'].value = url + name
+        # this are mutable, value will be set later
+        bpy.ops.object.game_property_new(type="STRING", name="stream_url")
+
+    def set_variable_display_properties(self, plane, name):
+        url = "http://{0}:{1}/".format(*self.streamer.server_address)
+        plane.game.properties['stream_url'].value = url + name
 
     def hide_object(self, obj):
         obj.hide = True

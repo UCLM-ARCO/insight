@@ -1,6 +1,7 @@
 # -*- mode: python; coding: utf-8 -*-
 
 import os
+import socket
 from multiprocessing import Process, Event
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from socketserver import ThreadingMixIn
@@ -61,6 +62,20 @@ class StreamServer(Process, IPCIface):
         self.out_queue_pool = out_queue_pool
         self.should_stop = Event()
         self.camera_pool = {}
+        self.server_address = (self.get_default_ip(), 8080)
+
+    def get_default_ip(self):
+        addr = "127.0.0.1"
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.settimeout(2)
+            s.connect(("8.8.8.8", 80))
+            addr = s.getsockname()[0]
+            s.close()
+        except Exception:
+            pass
+
+        return addr
 
     # this method is "remote"
     def add_camera(self, camera):
@@ -79,7 +94,7 @@ class StreamServer(Process, IPCIface):
         self.should_stop.set()
 
     def run(self):
-        self.server = ThreadingHTTPServer(('', 8080), StreamHandler)
+        self.server = ThreadingHTTPServer(self.server_address, StreamHandler)
         self.server.camera_pool = self.camera_pool
         self.server.should_stop = self.should_stop
         self.serve_forever()
